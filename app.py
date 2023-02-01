@@ -31,72 +31,95 @@ samplesType=['Circle','Square','Rectangle','Triangle','Oval','Diamond','Parallel
 
 if not os.path.exists(dataSetFolderName):
     os.makedirs(dataSetFolderName)
+else:
+    os.system("rm -rf "+dataSetFolderName)
 
-#create cirules
-if not os.path.exists(dataSetFolderName+"/Circule"):
-    os.makedirs(dataSetFolderName+"/Circule")
-for i in tqdm(range(countOfSamples)):
-    fileName=dataSetFolderName+"/Circule/"+str(i+1)+".png"
-    r=random.randint(10,int(samplesWidth/2))
-    x=random.randint(0, samplesWidth-2*r)
-    y=random.randint(0, samplesHeight-2*r)
-    createCircleImage(fileName, samplesWidth, samplesHeight, x, y, r)
 
-#create square
-if not os.path.exists(dataSetFolderName+"/Square"):
-    os.makedirs(dataSetFolderName+"/Square")
-for i in tqdm(range(countOfSamples)):
-    fileName=dataSetFolderName+"/Square/"+str(i+1)+".png"
-    r=random.randint(10,int(samplesWidth/2))
-    x=random.randint(0, samplesWidth-2*r)
-    y=random.randint(0, samplesHeight-2*r)
-    createSquareImage(fileName, samplesWidth, samplesHeight, x, y, r)
+countOfClassCounter = 0
+while True:
+    if countOfClassCounter >= countOfClass:
+        break
+    #create cirules
+    if not os.path.exists(dataSetFolderName+"/Circule"):
+        os.makedirs(dataSetFolderName+"/Circule")
+    for i in tqdm(range(countOfSamples)):
+        fileName=dataSetFolderName+"/Circule/"+str(i+1)+".png"
+        r=random.randint(10,int(samplesWidth/2))
+        x=random.randint(0, samplesWidth-2*r)
+        y=random.randint(0, samplesHeight-2*r)
+        createCircleImage(fileName, samplesWidth, samplesHeight, x, y, r)
 
-#create rectangle
-if not os.path.exists(dataSetFolderName+"/Rectangle"):
-    os.makedirs(dataSetFolderName+"/Rectangle")
-for i in tqdm(range(countOfSamples)):
-    fileName=dataSetFolderName+"/Rectangle/"+str(i+1)+".png"
-    w=random.randint(10,int(samplesWidth/2))
-    h=random.randint(10,int(samplesWidth/2))
-    x=random.randint(0, samplesWidth-2*r)
-    y=random.randint(0, samplesHeight-2*r)
-    createRectangleImage(fileName, samplesWidth, samplesHeight, x, y, w,h)
+    countOfClassCounter+=1
+    if countOfClassCounter >= countOfClass:
+        break
 
-#create Triangle
-if not os.path.exists(dataSetFolderName+"/Triangle"):
-    os.makedirs(dataSetFolderName+"/Triangle")
-for i in tqdm(range(countOfSamples)):
-    fileName=dataSetFolderName+"/Triangle/"+str(i+1)+".png"
+    #create square
+    if not os.path.exists(dataSetFolderName+"/Square"):
+        os.makedirs(dataSetFolderName+"/Square")
+    for i in tqdm(range(countOfSamples)):
+        fileName=dataSetFolderName+"/Square/"+str(i+1)+".png"
+        r=random.randint(10,int(samplesWidth/2))
+        x=random.randint(0, samplesWidth-2*r)
+        y=random.randint(0, samplesHeight-2*r)
+        createSquareImage(fileName, samplesWidth, samplesHeight, x, y, r)
+
+    countOfClassCounter+=1
+    if countOfClassCounter >= countOfClass:
+        break
     
-    x1=random.randint(0,int(samplesWidth))
-    y1=random.randint(0,int(samplesHeight))
+    #create rectangle
+    if not os.path.exists(dataSetFolderName+"/Rectangle"):
+        os.makedirs(dataSetFolderName+"/Rectangle")
+    for i in tqdm(range(countOfSamples)):
+        fileName=dataSetFolderName+"/Rectangle/"+str(i+1)+".png"
+        w=random.randint(10,int(samplesWidth/2))
+        h=random.randint(10,int(samplesWidth/2))
+        x=random.randint(0, samplesWidth-2*r)
+        y=random.randint(0, samplesHeight-2*r)
+        createRectangleImage(fileName, samplesWidth, samplesHeight, x, y, w,h)
     
-    x2=random.randint(1,int(samplesWidth))
-    y2=random.randint(1,int(samplesHeight))
-
-    x3=random.randint(2,int(samplesWidth))
-    y3=random.randint(2,int(samplesHeight))
-    createTrangleleImage(fileName, samplesWidth,samplesHeight, x1,y1,x2,y2,x3,y3)
-
-#create Polygon
-if not os.path.exists(dataSetFolderName+"/Polygon"):
-    os.makedirs(dataSetFolderName+"/Polygon")
-for i in tqdm(range(countOfSamples)):
-    fileName=dataSetFolderName+"/Polygon/"+str(i+1)+".png"
+    countOfClassCounter+=1
+    if countOfClassCounter >= countOfClass:
+        break
     
-    x1=random.randint(0,int(samplesWidth))
-    y1=random.randint(0,int(samplesHeight))
+    #create Triangle
+    if not os.path.exists(dataSetFolderName+"/Triangle"):
+        os.makedirs(dataSetFolderName+"/Triangle")
+    for i in tqdm(range(countOfSamples)):
+        fileName=dataSetFolderName+"/Triangle/"+str(i+1)+".png"
+        
+        x1=random.randint(0,int(samplesWidth))
+        y1=random.randint(0,int(samplesHeight))
+        
+        x2=random.randint(1,int(samplesWidth))
+        y2=random.randint(1,int(samplesHeight))
+
+        x3=random.randint(2,int(samplesWidth))
+        y3=random.randint(2,int(samplesHeight))
+        createTrangleleImage(fileName, samplesWidth,samplesHeight, x1,y1,x2,y2,x3,y3)
+
+    countOfClassCounter+=1
+    if countOfClassCounter >= countOfClass:
+        break
     
-    x2=random.randint(1,int(samplesWidth))
-    y2=random.randint(1,int(samplesHeight))
+    #create Polygon
+    if not os.path.exists(dataSetFolderName+"/Polygon"):
+        os.makedirs(dataSetFolderName+"/Polygon")
+    for i in tqdm(range(countOfSamples)):
+        fileName=dataSetFolderName+"/Polygon/"+str(i+1)+".png"
+        
+        x1=random.randint(0,int(samplesWidth))
+        y1=random.randint(0,int(samplesHeight))
+        
+        x2=random.randint(1,int(samplesWidth))
+        y2=random.randint(1,int(samplesHeight))
 
-    x3=random.randint(2,int(samplesWidth))
-    y3=random.randint(2,int(samplesHeight))
+        x3=random.randint(2,int(samplesWidth))
+        y3=random.randint(2,int(samplesHeight))
 
-    x4=random.randint(2,int(samplesWidth))
-    y4=random.randint(2,int(samplesHeight))
+        x4=random.randint(2,int(samplesWidth))
+        y4=random.randint(2,int(samplesHeight))
 
-    x5=random.randint(2,int(samplesWidth))
-    y5=random.randint(2,int(samplesHeight))
-    createPolygonImage(fileName, samplesWidth,samplesHeight, x1,y1,x2,y2,x3,y3,x4,y5,x5,y5)
+        x5=random.randint(2,int(samplesWidth))
+        y5=random.randint(2,int(samplesHeight))
+        createPolygonImage(fileName, samplesWidth,samplesHeight, x1,y1,x2,y2,x3,y3,x4,y5,x5,y5)
