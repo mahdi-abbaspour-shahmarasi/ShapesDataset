@@ -1,5 +1,4 @@
 from random import random
-import numpy as np
 import sys
 import os
 from  modules import createCircleImage, createSquareImage, createRectangleImage,createTrangleleImage,createPolygonImage
@@ -10,13 +9,14 @@ import random
 os.system('cls' if os.name=='nt' else 'clear')
 
 #Get passed arguments, name of program file, count of classes, count of samples,color type of samples, dimentions of samples
-#python app.py 2 100 binary 100*100  
+#python app.py 2 500 binary 100*100  
 arguments=sys.argv
 
 #Check intered argumentcount
 if len(arguments)<5 or len(arguments)>5:
     print("Count of interedarguments is not valid")
     print("Send only 4 argument{CountOfClasses, SampleCount, SamplesColorType, Dimentions}")
+    print("ex: python app.py 2 500 binary 100*100")
     exit()
 
 #Parsearguments 

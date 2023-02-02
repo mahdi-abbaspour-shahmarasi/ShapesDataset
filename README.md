@@ -5,5 +5,7 @@ Since newbies in machine learning need simple datasets for starting to train and
 
 You can run it simply by just "python app.py {countOfClass} {countOfSamples} {samplesColorType} {samplesWidth* samplesHeight}" where samplesColorType can include binary, etc.
 ```
-python app.py 2 500 binary 100*100 
+python app.py 3 500 binary 100*100 
 ```
+![My_Image](IMG/createDataSetClasses.gif)
+![My_Image](dataSetClasses.png)
