@@ -9,3 +9,8 @@ python app.py 3 500 binary 100*100
 ```
 ![My_Image](IMG/createDataSetClasses.gif)
 ![My_Image](IMG/dataSetClasses.png)
+
+You can see some of generated shapes in bellow:
+![My_Image](IMG/circleDataSetSamples.png)
+![My_Image](IMG/rectangularDataSetSamples.png)
+![My_Image](IMG/squareDataSetSamples.png)
