@@ -8,4 +8,4 @@ You can run it simply by just "python app.py {countOfClass} {countOfSamples} {sa
 python app.py 3 500 binary 100*100 
 ```
 ![My_Image](IMG/createDataSetClasses.gif)
-![My_Image](dataSetClasses.png)
+![My_Image](IMG/dataSetClasses.png)
