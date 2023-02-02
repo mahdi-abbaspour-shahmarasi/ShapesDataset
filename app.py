@@ -27,12 +27,12 @@ samplesColorType=arguments[3]
 [samplesWidth, samplesHeight]=[int(arguments[4].split('*')[0]),int(arguments[4].split('*')[1])]
 
 #Listof shapes
-samplesType=['Circle','Square','Rectangle','Triangle','Oval','Diamond','Parallelogram','Trapezoid','Pentagon','Hezagon']
+samplesType=['Circle','Square','Rectangle','Triangle','Polygon','Oval','Diamond','Parallelogram','Trapezoid','Pentagon','Hezagon']
 
 if not os.path.exists(dataSetFolderName):
     os.makedirs(dataSetFolderName)
 else:
-    os.system("rm -rf "+dataSetFolderName)
+    os.system('RMDIR '+dataSetFolderName+' /S /Q' if os.name=='nt' else "rm -rf "+dataSetFolderName)
 
 
 countOfClassCounter = 0
