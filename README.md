@@ -21,3 +21,7 @@ You can see some of generated shapes in bellow:
 ![My_Image](IMG/squareDataSetSamples.png)
 ### Colorful Dataset Samples
 ![My_Image](IMG/colorfulDatasetSamples.jpg)
+
+##To DO
+*Training a Classification Model for exsiting types
+*Coding a Model for recogonizing samples shape
